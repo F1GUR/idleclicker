@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.A1ammounttextBox = new System.Windows.Forms.TextBox();
+            this.A1_Upgradeammount = new System.Windows.Forms.Button();
+            this.A1_UpgradeInterval = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.A1_intervaltextBox = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -74,11 +81,58 @@
             this.textBox1.Text = "1";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // A1ammounttextBox
+            // 
+            this.A1ammounttextBox.Location = new System.Drawing.Point(32, 14);
+            this.A1ammounttextBox.Name = "A1ammounttextBox";
+            this.A1ammounttextBox.Size = new System.Drawing.Size(114, 23);
+            this.A1ammounttextBox.TabIndex = 4;
+            // 
+            // A1_Upgradeammount
+            // 
+            this.A1_Upgradeammount.Location = new System.Drawing.Point(184, 11);
+            this.A1_Upgradeammount.Name = "A1_Upgradeammount";
+            this.A1_Upgradeammount.Size = new System.Drawing.Size(96, 25);
+            this.A1_Upgradeammount.TabIndex = 5;
+            this.A1_Upgradeammount.Text = "Ulepsz ilość";
+            this.A1_Upgradeammount.UseVisualStyleBackColor = true;
+            // 
+            // A1_UpgradeInterval
+            // 
+            this.A1_UpgradeInterval.Location = new System.Drawing.Point(286, 12);
+            this.A1_UpgradeInterval.Name = "A1_UpgradeInterval";
+            this.A1_UpgradeInterval.Size = new System.Drawing.Size(137, 25);
+            this.A1_UpgradeInterval.TabIndex = 6;
+            this.A1_UpgradeInterval.Text = "Ulepsz czestotliwość";
+            this.A1_UpgradeInterval.UseVisualStyleBackColor = true;
+            this.A1_UpgradeInterval.Click += new System.EventHandler(this.A1_UpgradeInterval_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Auto upgrade ";
+            // 
+            // A1_intervaltextBox
+            // 
+            this.A1_intervaltextBox.Location = new System.Drawing.Point(436, 14);
+            this.A1_intervaltextBox.Name = "A1_intervaltextBox";
+            this.A1_intervaltextBox.Size = new System.Drawing.Size(123, 23);
+            this.A1_intervaltextBox.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.A1_intervaltextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.A1_UpgradeInterval);
+            this.Controls.Add(this.A1_Upgradeammount);
+            this.Controls.Add(this.A1ammounttextBox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -96,5 +150,11 @@
         private Label label1;
         private Button button2;
         private TextBox textBox1;
+        private TextBox A1ammounttextBox;
+        private Button A1_Upgradeammount;
+        private Button A1_UpgradeInterval;
+        private Label label2;
+        private TextBox A1_intervaltextBox;
+        private System.Windows.Forms.Timer timer1;
     }
 }

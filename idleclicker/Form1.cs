@@ -31,5 +31,10 @@ namespace idleclicker
                 button2.Text = "Upgrade\n" + nextUpgradeCost;
             }
         }
+
+        private void A1_UpgradeInterval_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
