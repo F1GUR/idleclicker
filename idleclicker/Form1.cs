@@ -76,8 +76,21 @@ namespace idleclicker
 
         private void A1_Upgradeammount_Click(object sender, EventArgs e)
         {
-            A1Ammount+=10;
-            A1ammounttextBox.Text = A1Ammount.ToString();
+            
+            int upgradeCost = (int)Math.Pow(10, buttonLevel);
+            if (Cash >= upgradeCost)
+            {
+                buttonLevel++;
+                A1Ammount += 10;
+                A1ammounttextBox.Text = A1Ammount.ToString();
+                Cash -= upgradeCost;
+
+
+            
+                string nextUpgradeCost = "($" + Math.Pow(10, buttonLevel).ToString() + ")";
+                A1_Upgradeammount.Text = "Ulepsz Iloœæ\n" + nextUpgradeCost;
+
+            }
         }
     }
 }
