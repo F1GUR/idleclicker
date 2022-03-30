@@ -38,7 +38,8 @@
             this.A1_UpgradeInterval = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.A1_intervaltextBox = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.A1Timer = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -65,7 +66,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(484, 394);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 33);
+            this.button2.Size = new System.Drawing.Size(119, 51);
             this.button2.TabIndex = 2;
             this.button2.Text = "Upgrade";
             this.button2.UseVisualStyleBackColor = true;
@@ -87,21 +88,24 @@
             this.A1ammounttextBox.Name = "A1ammounttextBox";
             this.A1ammounttextBox.Size = new System.Drawing.Size(114, 23);
             this.A1ammounttextBox.TabIndex = 4;
+            this.A1ammounttextBox.Text = "0";
+            this.A1ammounttextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A1_Upgradeammount
             // 
             this.A1_Upgradeammount.Location = new System.Drawing.Point(184, 11);
             this.A1_Upgradeammount.Name = "A1_Upgradeammount";
-            this.A1_Upgradeammount.Size = new System.Drawing.Size(96, 25);
+            this.A1_Upgradeammount.Size = new System.Drawing.Size(96, 50);
             this.A1_Upgradeammount.TabIndex = 5;
             this.A1_Upgradeammount.Text = "Ulepsz ilość";
             this.A1_Upgradeammount.UseVisualStyleBackColor = true;
+            this.A1_Upgradeammount.Click += new System.EventHandler(this.A1_Upgradeammount_Click);
             // 
             // A1_UpgradeInterval
             // 
             this.A1_UpgradeInterval.Location = new System.Drawing.Point(286, 12);
             this.A1_UpgradeInterval.Name = "A1_UpgradeInterval";
-            this.A1_UpgradeInterval.Size = new System.Drawing.Size(137, 25);
+            this.A1_UpgradeInterval.Size = new System.Drawing.Size(137, 49);
             this.A1_UpgradeInterval.TabIndex = 6;
             this.A1_UpgradeInterval.Text = "Ulepsz czestotliwość";
             this.A1_UpgradeInterval.UseVisualStyleBackColor = true;
@@ -122,12 +126,28 @@
             this.A1_intervaltextBox.Name = "A1_intervaltextBox";
             this.A1_intervaltextBox.Size = new System.Drawing.Size(123, 23);
             this.A1_intervaltextBox.TabIndex = 8;
+            this.A1_intervaltextBox.Text = "0";
+            this.A1_intervaltextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // A1Timer
+            // 
+            this.A1Timer.Tick += new System.EventHandler(this.A1klik);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(465, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 15);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "/na minute";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.A1_intervaltextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.A1_UpgradeInterval);
@@ -155,6 +175,7 @@
         private Button A1_UpgradeInterval;
         private Label label2;
         private TextBox A1_intervaltextBox;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer A1Timer;
+        private Label label3;
     }
 }
