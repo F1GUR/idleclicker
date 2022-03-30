@@ -86,7 +86,7 @@ namespace idleclicker
                 Cash -= upgradeCost;
 
 
-            
+            //test
                 string nextUpgradeCost = "($" + Math.Pow(10, buttonLevel).ToString() + ")";
                 A1_Upgradeammount.Text = "Ulepsz Iloœæ\n" + nextUpgradeCost;
 
